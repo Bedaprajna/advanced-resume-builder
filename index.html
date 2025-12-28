@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- FORM SECTION -->
+    <div class="form-section">
+        <h2>Resume Details</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="role" placeholder="Job Title">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="text" id="address" placeholder="Address">
+
+        <label>Upload Photo</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <textarea id="summary" placeholder="Profile Summary"></textarea>
+        <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+        <textarea id="education" placeholder="Education"></textarea>
+        <textarea id="experience" placeholder="Experience"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="printResume()">Download PDF</button>
+    </div>
+
+    <!-- RESUME PREVIEW -->
+    <div class="resume-section" id="resume">
+        <div class="header">
+            <img id="previewPhoto">
+            <h1 id="previewName"></h1>
+            <h3 id="previewRole"></h3>
+        </div>
+
+        <div class="content">
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+            <p><strong>Address:</strong> <span id="previewAddress"></span></p>
+
+            <h4>Profile</h4>
+            <p id="previewSummary"></p>
+
+            <h4>Skills</h4>
+            <ul id="previewSkills"></ul>
+
+            <h4>Education</h4>
+            <p id="previewEducation"></p>
+
+            <h4>Experience</h4>
+            <p id="previewExperience"></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
